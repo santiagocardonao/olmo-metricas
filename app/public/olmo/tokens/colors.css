@@ -1,0 +1,62 @@
+/* ============================================================
+   Olmo — Color tokens
+   Light-gray canvas, near-black ink, vivid VIOLET→INDIGO brand.
+   Signature move: violet→indigo gradient on big headlines.
+   ============================================================ */
+
+:root {
+  /* --- Brand: violet → indigo ------------------------------ */
+  --violet:        #7C3AED;  /* primary bright violet */
+  --violet-strong: #6D28D9;  /* hover / pressed */
+  --violet-soft:   #8B5CF6;  /* lighter stop, button top */
+  --violet-tint:   #F3EEFE;  /* faint violet surface */
+  --indigo:        #4338CA;  /* gradient mid */
+  --indigo-deep:   #312E81;  /* gradient end, deepest */
+  --violet-flat:   #4318D4;  /* solid vivid violet — full-bleed contact/footer band */
+
+  /* Signature gradients */
+  --grad-brand:    linear-gradient(98deg, #7C3AED 0%, #4338CA 60%, #312E81 100%); /* @kind color */
+  --grad-button:   linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%); /* @kind color */
+  --grad-icon:     linear-gradient(150deg, #8B7BF0 0%, #5B45C0 100%); /* @kind color */
+  /* Cover fill — COVER & BACK COVER use this RADIAL gradient, never a flat color. Same gradient for both. */
+  --grad-cover:    radial-gradient(120% 120% at 15% 12%, #8B5CF6 0%, #6D28D9 38%, #4338CA 68%, #312E81 100%); /* @kind color */
+
+  /* --- Ink & neutrals -------------------------------------- */
+  --ink:           #111111;  /* primary text, headings */
+  --ink-soft:      #2A2A2E;  /* dark pill / inverted surface */
+  --gray-700:      #4B5563;  /* strong secondary text */
+  --gray-500:      #6B7280;  /* secondary text */
+  --gray-400:      #9CA3AF;  /* card body / muted text */
+  --gray-300:      #D1D5DB;  /* faint dividers */
+  --gray-200:      #E5E7EB;  /* hairline borders */
+
+  /* --- Surfaces -------------------------------------------- */
+  --canvas:        #EFEFEF;  /* page background (light gray) */
+  --canvas-soft:   #F4F4F5;  /* inset panels inside cards */
+  --white:         #FFFFFF;  /* cards, pills */
+
+  /* --- Functional ------------------------------------------ */
+  --whatsapp:      #25D366;  /* floating chat button */
+  --online:        #22C55E;  /* status dot */
+  --signal-red:    #DC2626;  /* errors */
+
+  /* --- Semantic aliases ------------------------------------ */
+  --text-primary:    var(--ink);
+  --text-secondary:  var(--gray-500);
+  --text-muted:      var(--gray-400);
+  --text-inverse:    var(--white);
+  --text-brand:      var(--violet);
+
+  --surface-page:    var(--canvas);
+  --surface-card:    var(--white);
+  --surface-inset:   var(--canvas-soft);
+  --surface-inverse: var(--ink);
+  --surface-violet:  var(--violet-flat);
+
+  --border-default:  var(--gray-200);
+  --border-card:     rgba(17,17,17,0.06);
+
+  --accent:          var(--violet);
+  --accent-hover:    var(--violet-strong);
+  --focus-ring:      var(--violet);
+}

@@ -1,0 +1,59 @@
+/* ============================================================
+   Olmo — Typography tokens
+   Inter does everything (display → body), heavy weights for
+   headlines. Source Serif 4 ITALIC for occasional emphasis
+   words inside a headline (e.g. "Tu *sitio web*").
+   ============================================================ */
+
+:root {
+  /* --- Families -------------------------------------------- */
+  --font-logo:    "Cal Sans", "Inter", sans-serif;   /* wordmark / brand only */
+  --font-display: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-body:    "Inter", "Helvetica Neue", Arial, sans-serif;
+  /* Emphasis: ALWAYS italic. Use for a word or two inside a heading. */
+  --font-serif:   "Source Serif 4", Georgia, "Times New Roman", serif;
+  /* Script: the emphasis face (Source Serif 4, italic) — the "complex"
+     font. Used for line 2 of a quote/proposal title (line 1 sans,
+     line 2 this, set italic). No separate script family. */
+  --font-script:  var(--font-serif);
+  --font-mono:    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* --- Weights ----------------------------------- @kind font */
+  --fw-extralight: 200; /* @kind font */
+  --fw-light:     300; /* @kind font */
+  --fw-regular:   400; /* @kind font */
+  --fw-medium:    500; /* @kind font */
+  --fw-semibold:  600; /* @kind font */
+  --fw-bold:      700; /* @kind font */
+  --fw-extrabold: 800; /* @kind font */
+  --fw-black:     900; /* @kind font */
+
+  /* --- Type scale (size / line-height / tracking) ---------- */
+  /* Display headlines are huge + heavy (Inter 800) with tight leading. */
+  --fs-hero:      80px;  --lh-hero:    1.02 /* @kind font */;  --tr-hero:    -0.03em  /* @kind font */;
+  --fs-display:   64px;  --lh-display: 1.05 /* @kind font */;  --tr-display: -0.025em /* @kind font */;
+  --fs-h1:        48px;  --lh-h1:      1.08 /* @kind font */;  --tr-h1:      -0.02em  /* @kind font */;
+  --fs-h2:        34px;  --lh-h2:      1.12 /* @kind font */;  --tr-h2:      -0.015em /* @kind font */;
+  --fs-h3:        22px;  --lh-h3:      1.25 /* @kind font */;  --tr-h3:      -0.01em  /* @kind font */;
+  --fs-lead:      19px;  --lh-lead:    1.55 /* @kind font */;  --tr-lead:    0        /* @kind font */;
+  --fs-body:      16px;  --lh-body:    1.6  /* @kind font */;  --tr-body:    0        /* @kind font */;
+  --fs-small:     14px;  --lh-small:   1.5  /* @kind font */;  --tr-small:   0        /* @kind font */;
+  --fs-eyebrow:   14px;  --lh-eyebrow: 1.2  /* @kind font */;  --tr-eyebrow: 0        /* @kind font */;
+
+  /* --- Semantic weights ------------------------------------ */
+  /* Headings: SemiBold (600) primary + ExtraLight (200) accent lines. */
+  --text-hero-weight:    var(--fw-semibold);
+  --text-display-weight: var(--fw-semibold);
+  --text-h1-weight:      var(--fw-semibold);
+  --text-h2-weight:      var(--fw-semibold);
+  --text-h3-weight:      var(--fw-semibold);
+  --text-heading-light:  var(--fw-extralight);
+  /* Body: Medium (500). */
+  --text-body-weight:    var(--fw-medium);
+  --text-pill-weight:    var(--fw-semibold);
+  /* Supporting/descriptive paragraphs run THINNER — Inter Light (300).
+     Use for EVERY paragraph on a light background (canvas or white card):
+     hero sub-copy, card descriptions, testimonial quotes. Not for text
+     on the violet footer band. */
+  --text-support-weight: var(--fw-light);
+}
