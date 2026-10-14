@@ -1,4 +1,4 @@
-# Olmo Metrics
+# Olmo Métricas (Olmo Metrics)
 
 A free calculator for subscription businesses: apps, streaming, music, SaaS. Enter users, churn, price, payment fees, growth and costs; get MRR, annual revenue (run-rate **and** 12-month projection), CLTV, CAC, LTV:CAC, payback, profit and break-even, with a traffic-light diagnosis and a two-page A4 PDF.
 
@@ -80,7 +80,7 @@ cp .env.example .env    # Supabase URL and publishable key
 npm install
 npm run dev             # http://localhost:5174
 npm test                # formatting and defaults
-npm run deploy          # build + rsync to SiteGround over SSH
+npm run deploy          # build + rsync to SiteGround (cp .env.deploy.example .env.deploy first)
 ```
 
 Apply the migrations in `supabase/migrations/` to a Supabase project (CLI `supabase db push` or the SQL editor). Check the engine directly:

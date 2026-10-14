@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "test": "node --test src/lib/*.test.js",
-    "deploy": "npm run build && rsync -avz --delete -e 'ssh -i ~/.ssh/siteground_olmo -o IdentitiesOnly=yes -p 18765' dist/ u2531-nmup4a4i8veh@gtxm1137.siteground.biz:www/metricas.olmo.agency/public_html/"
+    "deploy": "sh scripts/deploy.sh"
   },
   "dependencies": {
     "react": "^19.3.0",
