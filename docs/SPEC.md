@@ -2,11 +2,11 @@
 
 Calculadora pública de métricas para negocios de suscripción (apps, streaming, música, SaaS B2C). En 2 minutos responde: **¿cuánto ingreso de verdad, cuánto vale cada cliente y si el negocio se sostiene?**
 
-Estado: **aprobado e implementado (v1)** · 2026-10-13
+Versión 1 · octubre de 2026
 
 ---
 
-## 1. Decisiones tomadas
+## 1. Decisiones de producto
 
 | Tema | Decisión |
 |---|---|
@@ -23,7 +23,6 @@ Estado: **aprobado e implementado (v1)** · 2026-10-13
 | Revenue anual | Se muestran los dos: run-rate (MRR × 12) y proyectado a 12 meses, con la explicación |
 | Costos | Marketing, nómina, contenido/licencias, infraestructura, otros fijos y costo variable por usuario |
 | PDF | `window.print()` con hoja de impresión A4 (texto real, no imagen) |
-| Repo | `santiagocardonao/olmo-metricas`, público, README en inglés |
 | Ejemplo | Streaming genérico ficticio ("Cinemar"), precargado |
 
 ---
@@ -216,39 +215,11 @@ Carga los inputs guardados, recalcula y muestra lo mismo. Si el visitante edita 
 - Sin IP ni datos personales, salvo el correo voluntario.
 
 ### Proyecto
-Mismo proyecto de Supabase de Cotiza (`dxukpgcsodrbktkhcutk`), tabla nueva `metric_studies`.
+Comparte el proyecto de Supabase de Olmo Cotiza, con su propia tabla `metric_studies`.
 
 ---
 
-## 7. Repositorio
-
-```
-olmo-metricas/
-  README.md              inglés: qué es, cómo funciona, fórmulas, seguridad, desarrollo
-  docs/
-    SPEC.md              este documento
-    FORMULAS.md          fórmulas con ejemplo numérico resuelto (inglés)
-  supabase/
-    migrations/          tabla, RLS y funciones
-  app/
-    src/lib/api.js       llamadas RPC y hook useMetrics
-    src/lib/defaults.js  ejemplo, presets de pasarelas, monedas
-    src/lib/i18n.js      textos ES / EN
-    src/lib/*.test.js    tests (node --test)
-    src/…                componentes
-    public/.htaccess     rewrite SPA
-```
-
----
-
-## 8. Ejemplo "Cinemar" (verificación)
+## 7. Ejemplo "Cinemar" (verificación)
 
 Con los defaults: ARPU ≈ 9,58 · comisión ≈ 0,51 · margen de contribución ≈ 8,27 por usuario · churn combinado ≈ 4,5 % · CLTV por margen ≈ 184 · usuarios nuevos 3.500 · CAC ≈ 34 · LTV:CAC ≈ 5,4 · payback ≈ 4 meses · MRR ≈ 479 mil · utilidad ≈ +28 mil/mes. Es un negocio sano pero ajustado, buen punto de partida para mover variables.
 
----
-
-## 9. Decisiones finales
-
-1. Supabase: mismo proyecto de Cotiza, tabla nueva.
-2. Subdominio `metricas.olmo.agency`, creado en SiteGround el 2026-10-13.
-3. Los correos se quedan en Supabase por ahora (columna `email` + `consent_at`).
